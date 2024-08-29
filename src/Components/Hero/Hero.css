@@ -1,0 +1,234 @@
+/* .hero{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero img{
+    margin-top: 20px;
+    border-radius: 150px;
+    width: 15%;
+}
+
+.hero h1{
+    text-align: center;
+    font-size: 49px;
+    width:70%;
+    font-weight: 600px;
+}
+
+.hero h1 span{
+    background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent
+}
+
+.hero p{
+    width:50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.hero-action{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500px;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.hero-connect{
+    padding:20px 40px;
+    border-radius: 50px;
+    font-weight: 500px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.4%);
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.hero-resume{
+    padding: 20px 40px;
+    border-radius: 50px;
+    border:2px solid #fff;
+    cursor: pointer; 
+    font-weight: 500px;   
+}
+
+.hero-connect:hover{
+    border: 2px solid #f8f5f6;
+   transform: scale(1.09);
+}
+
+.hero-resume:hover{
+   background-color: rgb(249, 247, 247);
+   color: black;
+}
+
+@media(max-width:768){
+    .hero img{
+        margin-bottom: 120px;
+        width:260px;
+
+    }
+    .hero h1{
+        margin-top: 50px;
+        width:90%;
+        font-size: 50px;
+    }
+} */
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out;
+}
+
+.hero.animate {
+    animation: slideInFromRight 1s ease-out forwards;
+    opacity: 1; /* Set opacity to 1 to make it visible */
+}
+
+.hero img {
+    margin-top: 20px;
+    border-radius: 150px;
+    width: 15%;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 49px;
+    width: 70%;
+    font-weight: 600;
+}
+
+.hero h1 span {
+    background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.hero-action {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.hero-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.4%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hero-resume {
+    text-decoration: none;
+    color: #f8f5f6;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.hero-connect:hover {
+    border: 2px solid #f8f5f6;
+    transform: scale(1.09);
+}
+
+a{
+    text-decoration: none;
+}
+
+.hero-resume:hover {
+    background-color: rgb(255, 249, 254);
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        margin-bottom: 5px;
+        width: 40%; /* Adjusted for better scaling on smaller screens */
+    }
+    
+    .hero h1 {
+        margin-top: 0px;
+        width: 90%;
+        font-size: 35px; /* Reduced font size for better readability on smaller screens */
+    }
+    
+    .hero p {
+        width: 80%; /* Adjusted width for smaller screens */
+        font-size: 18px; /* Slightly smaller text size */
+        line-height: 27px; /* Reduced line height */
+    }
+    
+    .hero-action {
+       
+        gap: 20px; /* Reduced gap for better spacing */
+        font-size: 20px; /* Adjusted font size */
+    }
+    
+    .hero-connect, .hero-resume {
+        padding: 15px 30px; /* Smaller padding for buttons */
+        font-size: 18px; /* Smaller font size for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero img {
+        width: 50%; /* Further reduced image size for very small screens */
+    }
+    
+    .hero h1 {
+        font-size: 17px; /* Smaller font size */
+        width: 100%; /* Full width */
+    }
+    
+    .hero p {
+        width: 90%; /* Narrower width */
+        font-size: 14px; /* Smaller text */
+    }
+    
+    .hero-action {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap between buttons */
+        font-size: 18px; /* Smaller font size */
+    }
+    
+    .hero-connect, .hero-resume {
+        padding: 10px 20px; /* Smaller padding for very small screens */
+    }
+}
