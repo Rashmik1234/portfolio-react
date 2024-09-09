@@ -1,6 +1,6 @@
 import React,{ useEffect, useRef } from 'react'
 import './Hero.css'
-import resume from '../../assets/Rashmi_kulkarni_CV.pdf';
+import resume from '../../assets/Rashmik_CV.pdf';
 import Profile from '../../assets/profile.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 const Hero = () => {
